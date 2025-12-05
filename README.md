@@ -23,6 +23,8 @@
 * Maps Visualization (Azure Maps / Bing Maps)
 * CSV Data
 
+<img width="995" height="561" alt="orders" src="https://github.com/user-attachments/assets/df256f9f-10c6-4ddd-9d09-23f187449af2" />
+
 ### Page 1 — Sales Team Dashboard
 #### KPIs:
 * Total Sales
