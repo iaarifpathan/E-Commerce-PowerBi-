@@ -118,6 +118,12 @@ Visuals:
 'Sales Targets'[SalesbyPOC] > 'Sales Targets'[2023 Sales Target],"Target Exceeded")
 * Sales Difference = 'Sales Targets'[SalesbyPOC] - 'Sales Targets'[2023 Sales Target]
 * Sales Manager = RELATED('Sales Targets'[Sales Manager])
+### Sales Manager Target Completion (Performance Table)
+#### This table evaluates the performance of all sales managers by comparing:
+* Total Sales Achieved
+* 2023 Target Assigned
+* Target Completion %
+<mark>DAX : Sales Manager Target Completion = SUMMARIZE('Sales Targets', 'Sales Targets'[Sales Manager], "Total Sales", SUM('Sales Targets'[SalesbyPOC]), "Total Target", SUM('Sales Targets'[2023 Sales Target]) , "% target completion", 100*SUM('Sales Targets'[SalesbyPOC])/SUM('Sales Targets'[2023 Sales Target]))</mark>
 
 ### Key Insights Summary
 * USA is the strongest market across both sales and orders
