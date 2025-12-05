@@ -23,6 +23,13 @@
 * Maps Visualization (Azure Maps / Bing Maps)
 * CSV Data
 
+### Data Cleaning (Power Query)
+* Removed duplicates
+* Corrected data types
+* Handled null and inconsistent values
+* Merge Columns
+* Merged tables using keys (POC, Manager, Country)
+
 <mark>Sales Team</mark>
 <img width="990" height="557" alt="Sales_Team" src="https://github.com/user-attachments/assets/025347bd-1388-4936-a64b-dc0913d978a0" />
 
@@ -101,20 +108,16 @@ Visuals:
 * Useful for manager evaluation & incentive planning
 
 ### DAX Measures Used
-#### (Some examples from your project)
-* Total Sales = SUM(Sales[SalesValue])
-* Total Orders = DISTINCTCOUNT(Orders[OrderID])
-* Average Sales Difference = AVERAGE(Sales[SalesValue] - Sales[Target])
-* Target Bucket = SWITCH(TRUE(), ...)
+* Total Sales = SUM('Sales Targets'[SalesbyPOC])
+* Total Orders = DISTINCTCOUNT(Orders[Order ID])
+### DAX Column Used
+* SalesbyPOC = SUMX(FILTER(Orders,Orders[Sales POC] = 'Sales Targets'[Sales POC]),Orders[Order Value])
+* Target Bucket = SWITCH(TRUE(),
+'Sales Targets'[SalesbyPOC] < 'Sales Targets'[2023 Sales Target], "Target Not Met",
+'Sales Targets'[SalesbyPOC] = 'Sales Targets'[2023 Sales Target], "Target Met",
+'Sales Targets'[SalesbyPOC] > 'Sales Targets'[2023 Sales Target],"Target Exceeded")
+* Sales Difference = 'Sales Targets'[SalesbyPOC] - 'Sales Targets'[2023 Sales Target]
 * Sales Manager = RELATED('Sales Targets'[Sales Manager])
-
-### Data Cleaning (Power Query)
-* Removed duplicates
-* Corrected data types
-* Extracted date, month, year
-* Handled null and inconsistent values
-* Standardized category & country names
-* Merged tables using keys (POC, Manager, Country)
 
 ### Key Insights Summary
 * USA is the strongest market across both sales and orders
