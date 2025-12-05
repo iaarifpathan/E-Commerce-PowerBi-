@@ -108,16 +108,16 @@ Visuals:
 * Useful for manager evaluation & incentive planning
 
 ### DAX Measures Used
-* Total Sales = SUM('Sales Targets'[SalesbyPOC])
-* Total Orders = DISTINCTCOUNT(Orders[Order ID])
+* <mark>Total Sales = SUM('Sales Targets'[SalesbyPOC])</mark>
+* <mark>Total Orders = DISTINCTCOUNT(Orders[Order ID])</mark>
 ### DAX Column Used
-* SalesbyPOC = SUMX(FILTER(Orders,Orders[Sales POC] = 'Sales Targets'[Sales POC]),Orders[Order Value])
-* Target Bucket = SWITCH(TRUE(),
+* <mark>SalesbyPOC = SUMX(FILTER(Orders,Orders[Sales POC] = 'Sales Targets'[Sales POC]),Orders[Order Value])</mark>
+* <mark>Target Bucket = SWITCH(TRUE(),
 'Sales Targets'[SalesbyPOC] < 'Sales Targets'[2023 Sales Target], "Target Not Met",
 'Sales Targets'[SalesbyPOC] = 'Sales Targets'[2023 Sales Target], "Target Met",
-'Sales Targets'[SalesbyPOC] > 'Sales Targets'[2023 Sales Target],"Target Exceeded")
-* Sales Difference = 'Sales Targets'[SalesbyPOC] - 'Sales Targets'[2023 Sales Target]
-* Sales Manager = RELATED('Sales Targets'[Sales Manager])
+'Sales Targets'[SalesbyPOC] > 'Sales Targets'[2023 Sales Target],"Target Exceeded")</mark>
+* <mark>Sales Difference = 'Sales Targets'[SalesbyPOC] - 'Sales Targets'[2023 Sales Target]</mark>
+* <mark>Sales Manager = RELATED('Sales Targets'[Sales Manager])</mark>
 ### Sales Manager Target Completion (Performance Table)
 #### This table evaluates the performance of all sales managers by comparing:
 <mark>DAX : Sales Manager Target Completion = SUMMARIZE('Sales Targets', 'Sales Targets'[Sales Manager], "Total Sales", SUM('Sales Targets'[SalesbyPOC]), "Total Target", SUM('Sales Targets'[2023 Sales Target]) , "% target completion", 100*SUM('Sales Targets'[SalesbyPOC])/SUM('Sales Targets'[2023 Sales Target]))</mark>
