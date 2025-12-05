@@ -23,7 +23,7 @@
 * Maps Visualization (Azure Maps / Bing Maps)
 * CSV Data
 
-- Sales Team
+<mark>Sales Team</mark>
 <img width="990" height="557" alt="Sales_Team" src="https://github.com/user-attachments/assets/025347bd-1388-4936-a64b-dc0913d978a0" />
 
 ### Page 1 — Sales Team Dashboard
@@ -43,7 +43,7 @@ Visuals:
 * Team Alpha shows the highest target achievements
 * USA contributes the largest share in order revenue
 
-- Orders
+<mark>Orders</mark>
 <img width="995" height="561" alt="orders" src="https://github.com/user-attachments/assets/a9d28986-c13a-478e-ba68-97a127390586" />
 
 ### Page 2 — Orders Dashboard
@@ -65,7 +65,7 @@ Visuals:
 * USA ranks #1 in order volume
 * October & November show peak order activity
 
-- Sales Target
+<mark>Sales Target</mark>
 <img width="990" height="558" alt="Sales_Target" src="https://github.com/user-attachments/assets/d6f62309-c1b0-41a0-b5fd-558f13a74cc2" />
 
 ### Page 3 — Sales Target Dashboard
@@ -78,7 +78,7 @@ Visuals:
 * Consistent underperformance across several teams
 * Clear visual to track daily target gaps
 
-- Sales in each country
+<mark>Sales in each country</mark>
 <img width="991" height="555" alt="Sales_in_each_country" src="https://github.com/user-attachments/assets/ccb96999-6e9c-4299-ac76-edf223a3d073" />
 
 ### Page 4 — Sales in Each Country
@@ -89,7 +89,7 @@ Visuals:
 * Regional managers show strong contribution to revenue
 * Geographic insights highlight expansion opportunities
 
-- SM Sales by Country
+<mark>SM Sales by Country</mark>
 <img width="988" height="553" alt="SM_Sales_by_country" src="https://github.com/user-attachments/assets/53491593-4823-44d1-9216-b2ec295140fe" />
 
 ### Page 5 — Sales Manager Sales by Country
